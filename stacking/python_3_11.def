@@ -1,0 +1,17 @@
+Bootstrap: docker
+From: continuumio/miniconda3
+
+
+%post
+    conda init
+    # Create envs and install packages
+    conda create --name myenv python=3.11 pandas numpy
+    
+    . /opt/conda/etc/profile.d/conda.sh
+    conda activate myenv
+    conda install pip
+    pip install beautifulsoup4     
+    
+    # some special environment things for singularity
+    echo ". /opt/conda/etc/profile.d/conda.sh" >> $SINGULARITY_ENVIRONMENT
+    echo "conda activate myenv" >> $SINGULARITY_ENVIRONMENT

@@ -37,3 +37,5 @@ singularity push <your_package_file> oras://ghcr.io/<github_username_or_organiza
 
 
 ### Optional Step 4: Linking your container to a repository
+
+If you go to your Github user profile, and then Packages, you should see your package.  There will be an option to link it to a repository!

@@ -30,3 +30,14 @@ Python 3.9.25
 Python 3.11.15
 ```
 
+## Step 3 - Passing Data Between Containers
+
+You'll likely need to pass data between these containers.  There are lots of methods to accomplish this - I'll illustrate two:
+* Saving a dataframe as a CSV
+* Saving an object as a Pickle file
+
+In `save_data.py`, you'll see that I load the iris dataset in Pandas, and save it both as a CSV using `.to_csv()`, and also write to a Pickle file using Python's built in `pickle` package
+
+In `load_data.py`, I load these files using similar methods.  For the CSV, I use the `read_csv()` function.  For Pickle, I use `pickle.load()`.  
+
+

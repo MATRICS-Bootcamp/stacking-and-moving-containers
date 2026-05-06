@@ -39,3 +39,20 @@ singularity push <your_package_file> oras://ghcr.io/<github_username_or_organiza
 ### Optional Step 4: Linking your container to a repository
 
 If you go to your Github user profile, and then Packages, you should see your package.  There will be an option to link it to a repository!
+
+
+## Pulling a container from Github Packages
+
+### Optional: Authentication
+
+If your package is private, you'll need to follow the Authentication instructions above to authenticate.
+
+### Pulling with Singularity
+
+You can pull a package from github with the following command:
+
+```bash
+singularity pull oras://ghcr.io/<github_username_or_organization>/<package_name>:<package_tag>
+```
+
+The package will appear as a .sif file in your current directory!

@@ -31,6 +31,7 @@ Assuming you have a container file in your local directory, you can push your co
 singularity push <your_package_file> oras://ghcr.io/<github_username_or_organization>/<package_name>:<package_tag>
 ```
 * `<github_username_or_organization>`: You need to specify either your Github username or organization to push the container to.
+  * BIG NOTICE - you have to have your username and/or organization in all lowercase!  For example: "MATRICS-Bootcamp" has to be "oras://ghcr.io/matrics-bootcamp/...."
 * `<package_name>`: You can name the package anything you'd like
 * `<package_tag>`: Tagging containers is a common practice.  There's a variety of strategies: tag the newest version `latest`, tag releases with the version number, tag with the git commit hash, etc...
 
